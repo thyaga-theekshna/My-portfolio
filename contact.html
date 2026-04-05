@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Thyaga Theekshana</title>
+    <meta name="description" content="Contact Thyaga Theekshana via a simple form." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top border-bottom">
+        <div class="container">
+          <a class="navbar-brand fw-bold text-primary" href="./index.html">TTD.Kemis</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="siteNav">
+            <ul class="navbar-nav ms-auto align-items-center gap-2">
+              <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="./index.html#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
+              <li class="nav-item"><a class="btn btn-primary active" href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="py-5">
+        <div class="container" style="max-width: 800px;">
+          <h1 class="h1 fw-bold mb-3">Contact</h1>
+          <p class="text-muted">Send me a message. I will get back to you soon.</p>
+
+          <form id="contact-form" novalidate class="mt-4">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required data-bs-toggle="tooltip" title="Enter at least 2 characters" />
+                <small class="text-danger" id="name-error"></small>
+              </div>
+
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" required data-bs-toggle="tooltip" title="We'll never share your email" />
+                <small class="text-danger" id="email-error"></small>
+              </div>
+
+              <div class="col-12">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required />
+                <small class="text-danger" id="subject-error"></small>
+              </div>
+
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" rows="6" class="form-control" placeholder="Write your message..." required></textarea>
+                <small class="text-danger" id="message-error"></small>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-3 btn-tilt"><i class="bi bi-send me-1"></i>Submit</button>
+            <p class="form-status mt-3" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-top py-4 bg-white">
+      <div class="container text-center">
+        <p class="mb-0 text-muted">© 2025 Thyaga Theekshana. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button id="scrolltop" class="scrolltop btn btn-primary rounded-circle" type="button" aria-label="Scroll to top" data-bs-toggle="tooltip" title="Back to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

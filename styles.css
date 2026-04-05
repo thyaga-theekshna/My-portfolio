@@ -1,0 +1,55 @@
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #f5f1f4;
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.avatar:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(37,99,235,.25); }
+
+@media (min-width: 768px) {
+  .avatar {
+    width: 220px;
+    height: 220px;
+    font-size: 2.25rem;
+  }
+}
+
+/* subtle raise on hover for cards/badges */
+.hover-raise { transition: transform .2s ease, box-shadow .2s ease; }
+.hover-raise:hover { transform: translateY(-6px); box-shadow: 0 .5rem 1.25rem rgba(0,0,0,.08) !important; }
+
+/* small tilt for CTA buttons */
+.btn-tilt { transition: transform .15s ease; }
+.btn-tilt:hover { transform: translateY(-2px); }
+
+/* scroll-in reveal animation (uses class toggled by JS) */
+.reveal { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.show { opacity: 1; transform: none; }
+
+/* back-to-top button */
+.scrolltop { position: fixed; right: 1rem; bottom: 1rem; width: 44px; height: 44px; display: none; align-items: center; justify-content: center; box-shadow: 0 .5rem 1rem rgba(133, 173, 181, 0.15); }
+.scrolltop.show { display: inline-flex; }
+
+
+
+.avatar img {
+    width: 200px; /* adjust as needed */
+    height: 200px; /* keep it square for a perfect circle */
+    object-fit: cover; /* ensures image fits without distortion */
+    border-radius: 50%; /* makes it circular */
+    border: 5px solid #333; /* circle frame color & thickness */
+}
